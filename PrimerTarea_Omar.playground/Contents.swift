@@ -8,13 +8,29 @@ import UIKit
  
  Coursera IOS  */
 
+var cadenatemporal : String = ""
+
 for rango in 0...100
 {
-    if rango % 5 == 0 { print("\(rango)  " + "Bingo!!!") }
-    if rango % 2 == 0 { print("\(rango)  " + "Par!!!") }
-    if rango % 2 != 0 { print("\(rango)  " + "Impar!!!") }
-    if rango >= 30 && rango <= 40 { print("\(rango)" + "Viva Switf!!!") }
-    
+        if rango % 2 == 0 {
+        cadenatemporal = "\(rango)  " + "Par!!!"
+        if rango % 5 == 0 {
+            cadenatemporal = cadenatemporal + " Bingo!!!"
+        }
+        if rango >= 30 && rango <= 40 {
+            cadenatemporal = cadenatemporal + " Viva Switf!!!"
+        }
+    } else
+    {
+        cadenatemporal = "\(rango)  " + "Impar!!!"
+        if rango % 5 == 0 {
+            cadenatemporal = cadenatemporal + " Bingo!!!"
+        }
+        if rango >= 30 && rango <= 40 {
+            cadenatemporal = cadenatemporal + " Viva Switf!!!"
+        }
+    }
+    print("\(cadenatemporal)")
 }
 
 
